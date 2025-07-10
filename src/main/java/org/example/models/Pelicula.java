@@ -1,4 +1,4 @@
-package org.example;
+package org.example.models;
 
 public record Pelicula 
     (String title,
@@ -7,6 +7,5 @@ public record Pelicula
     String director,
     String producer, 
     String release_date){
-    
-
+        
 }

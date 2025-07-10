@@ -7,11 +7,13 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 
+import org.example.models.Pelicula;
+
 import com.google.gson.Gson;
 
 public class BuscarPelicula{
 
-    Pelicula pelicula(int numeroPelicula){
+    public Pelicula pelicula(int numeroPelicula){
 
         String direccion = "https://swapi.py4e.com/api/films/" + numeroPelicula + "/";
  
