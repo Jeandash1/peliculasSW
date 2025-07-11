@@ -29,12 +29,14 @@ public class BuscarPelicula{
             response = client
                 .send(request, BodyHandlers.ofString());
 
+            return new Gson().fromJson(response.body(), Pelicula.class);
+
         } catch (IOException | InterruptedException e) {
 
-            e.printStackTrace();
+            throw new RuntimeException("No se pudo obtener la película");
         }
 
-        return new Gson().fromJson(response.body(), Pelicula.class);
+        
 
     }
 }
